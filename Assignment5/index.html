@@ -8,6 +8,17 @@
   * { box-sizing: border-box; }
   body { margin: 0; font-family: Arial, sans-serif; background: #eef2f8; }
 
+  /* sticky = stays at the top while you scroll */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #12203a;
+    color: white;
+    padding: 14px;
+    text-align: center;
+  }
+
   .card {
     width: 280px;
     margin: 24px auto;
@@ -40,9 +51,24 @@
     margin-top: 12px;
     font-size: 14px;
   }
+
+  /* fixed = always at the same place on screen */
+  .fab {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 52px;
+    height: 52px;
+    border: 0;
+    border-radius: 50%;
+    background: #ffb703;
+    font-size: 26px;
+  }
 </style>
 </head>
 <body>
+  <header>My Profile Page</header>
   <div class="card">
     <div class="avatar">A</div>
     <h2>Arrima Singh</h2>
@@ -53,5 +79,6 @@
       text is here so that the box shows a scroll bar. Try scrolling it!
     </div>
   </div>
+  <button class="fab">+</button>
 </body>
 </html>
