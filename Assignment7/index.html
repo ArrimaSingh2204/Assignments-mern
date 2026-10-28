@@ -8,7 +8,6 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Arial, sans-serif; background: #eef2f8; }
 
-  /* Grid: 2 columns, 170px side and the rest (1fr) */
   .layout {
     display: grid;
     grid-template-columns: 170px 1fr;
@@ -17,14 +16,30 @@
   }
   header { background: #12203a; color: white; padding: 14px; border-radius: 8px; }
   aside { background: #dbe5fb; padding: 14px; border-radius: 8px; }
-  main { background: white; padding: 14px; border-radius: 8px; }
+
+  /* Boxes: as many columns as can fit */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  .item { background: white; padding: 16px; border-radius: 10px; }
 </style>
 </head>
 <body>
   <div class="layout">
     <header><h2>My Dashboard</h2></header>
     <aside><h3>Menu</h3></aside>
-    <main>Main area</main>
+    <main>
+      <div class="gallery">
+        <div class="item"><b>120</b><br>Users</div>
+        <div class="item"><b>Rs 45k</b><br>Sales</div>
+        <div class="item"><b>36</b><br>Orders</div>
+        <div class="item"><b>4.8</b><br>Rating</div>
+        <div class="item"><b>18</b><br>Messages</div>
+        <div class="item"><b>92%</b><br>Done</div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
