@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #eef2f8; }
+
+  /* Grid: 2 columns, 170px side and the rest (1fr) */
+  .layout {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  header { background: #12203a; color: white; padding: 14px; border-radius: 8px; }
+  aside { background: #dbe5fb; padding: 14px; border-radius: 8px; }
+  main { background: white; padding: 14px; border-radius: 8px; }
+</style>
+</head>
+<body>
+  <div class="layout">
+    <header><h2>My Dashboard</h2></header>
+    <aside><h3>Menu</h3></aside>
+    <main>Main area</main>
+  </div>
+</body>
+</html>
