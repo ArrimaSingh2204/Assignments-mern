@@ -8,14 +8,23 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Arial, sans-serif; background: #eef2f8; }
 
+  /* The whole page layout, with named areas */
   .layout {
     display: grid;
     grid-template-columns: 170px 1fr;
+    grid-template-areas:
+      "head head"
+      "side main"
+      "foot foot";
     gap: 10px;
+    min-height: 100vh;
     padding: 10px;
   }
-  header { background: #12203a; color: white; padding: 14px; border-radius: 8px; }
-  aside { background: #dbe5fb; padding: 14px; border-radius: 8px; }
+  header { grid-area: head; background: #12203a; color: white; padding: 14px; border-radius: 8px; }
+  aside { grid-area: side; background: #dbe5fb; padding: 14px; border-radius: 8px; }
+  main { grid-area: main; }
+  footer { grid-area: foot; background: #12203a; color: white; padding: 12px; text-align: center; border-radius: 8px; }
+  aside li { margin: 8px 0 8px 18px; }
 
   /* Boxes: as many columns as can fit */
   .gallery {
@@ -29,7 +38,14 @@
 <body>
   <div class="layout">
     <header><h2>My Dashboard</h2></header>
-    <aside><h3>Menu</h3></aside>
+    <aside>
+      <h3>Menu</h3>
+      <ul>
+        <li>Home</li>
+        <li>Reports</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
     <main>
       <div class="gallery">
         <div class="item"><b>120</b><br>Users</div>
@@ -40,6 +56,7 @@
         <div class="item"><b>92%</b><br>Done</div>
       </div>
     </main>
+    <footer>Made with CSS Grid</footer>
   </div>
 </body>
 </html>
