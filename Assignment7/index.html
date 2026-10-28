@@ -32,7 +32,17 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 12px;
   }
-  .item { background: white; padding: 16px; border-radius: 10px; }
+
+  /* Flexbox inside each grid box */
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .icon { font-size: 28px; }
 </style>
 </head>
 <body>
@@ -48,12 +58,12 @@
     </aside>
     <main>
       <div class="gallery">
-        <div class="item"><b>120</b><br>Users</div>
-        <div class="item"><b>Rs 45k</b><br>Sales</div>
-        <div class="item"><b>36</b><br>Orders</div>
-        <div class="item"><b>4.8</b><br>Rating</div>
-        <div class="item"><b>18</b><br>Messages</div>
-        <div class="item"><b>92%</b><br>Done</div>
+        <div class="item"><span class="icon">&#128100;</span><div><b>120</b><br>Users</div></div>
+        <div class="item"><span class="icon">&#128176;</span><div><b>Rs 45k</b><br>Sales</div></div>
+        <div class="item"><span class="icon">&#128230;</span><div><b>36</b><br>Orders</div></div>
+        <div class="item"><span class="icon">&#11088;</span><div><b>4.8</b><br>Rating</div></div>
+        <div class="item"><span class="icon">&#128172;</span><div><b>18</b><br>Messages</div></div>
+        <div class="item"><span class="icon">&#9989;</span><div><b>92%</b><br>Done</div></div>
       </div>
     </main>
     <footer>Made with CSS Grid</footer>
